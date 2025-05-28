@@ -1,0 +1,43 @@
+Keyword_Discovery:
+  description: >
+    Research 10 high-intent, long-tail keywords for a website selling
+    sustainable fashion, upcycled furniture, and eco-friendly home appliances.
+    Focus on keywords that include cashback, flexible returns, and natural materials.
+  expected_output: >
+    A list of 10 high-intent, long-tail keywords related to sustainable fashion,
+    upcycled furniture, and eco-friendly home appliances.
+  agent: Keyword_Researcher
+
+Homepage_and_Category_Optimization:
+  description: >
+    Using the keywords from Task 1, optimize homepage and category page content.
+    Emphasize terms like eco-conscious living, sustainable choices, and cashback 
+    returns on green products. Make content SEO-friendly but natural and 
+    conversion-optimized.
+  expected_output: >
+    A list of 10 optimizations for the homepage and category page.
+  agent: Content_Optimizer
+  depends_on:
+      Keyword_Discovery
+
+Product_Page_Copy_Enhancement:
+  description: >
+    Improve product listings for 3 sample items:
+    1. Upcycled denim jacket
+    2. Natural bamboo sofa
+    3. Eco-efficient washing machine
+    Incorporate keywords from Task 1 and highlight sustainable materials,
+    values, and your cashback return policy.
+  expected_output: >
+    A list of optimizations for each sample product.
+  agent: Product_Page_Enhancer
+  depends_on:
+      Keyword_Discovery
+
+Backlink_Outreach_Planning:
+  description: >
+    Scrape green content sites or ethical directories and find where your competitors are getting backlinks.
+  expected_output: > 
+    A list of outreach targets or guest post ideas like 10 Ethical Brands Offering Cashback on Returns.
+  agent: Backlink_Strategist
+    
